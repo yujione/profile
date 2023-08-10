@@ -2,7 +2,7 @@
 $(function () {
 	const $loading = $('.loading');
 	$loading.children('p').fadeOut();
-	$loading.delay(250).fadeOut(800);
+	$loading.delay(300).fadeOut(800);
 });
 
 //
