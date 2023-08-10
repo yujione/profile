@@ -57,6 +57,13 @@ $point-color-2: #fcf8e3;
 		overflow: hidden;
 		position: relative;
 
+		&:before {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: $sec-color-2;
+		}
+
 		> .intro {
 			position: absolute;
 			left: 0;
