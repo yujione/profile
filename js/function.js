@@ -159,6 +159,33 @@ $(function () {
     // 	$('#ability .bar').width(0);
     // }
   });
+
+  const $btnProfile = $("#ability .btnProfile");
+  const $shadow = $("#ability .shadow");
+  const $btnclse = $("#ability .shadow>.lightbox>.clse");
+
+  $btnProfile.on("click", function (evt) {
+    evt.preventDefault();
+    $shadow.show();
+  });
+
+  $btnclse.on("click", function () {
+    $shadow.hide();
+  });
+
+  $shadow.on("click", function () {
+    $(this).hide();
+  });
+
+  $shadow.children(".lightbow").on("click", function (evt) {
+    evt.stopPropagation();
+  });
+
+  $(document).on("keyup", function (evt) {
+    if (evt.which === 27) {
+      $shadow.hide();
+    }
+  });
 });
 
 //uxdesign 영역
