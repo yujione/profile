@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  background-color: #fdfbf4;
+}
+
 #wrap {
   position: relative;
   min-width: 1200px;
@@ -195,8 +199,7 @@
 #wrap header {
   width: 100%;
   min-width: 1200px;
-  background-color: #c3c6b3;
-  border-bottom: 1px solid #eeeeee;
+  background-color: #01331e;
 }
 @media screen and (max-width: 640px) {
   #wrap header {
@@ -224,7 +227,8 @@
 #wrap header > .container > h2 > a {
   display: block;
   height: 32px;
-  color: #1d340a;
+  color: #fdfbf4;
+  font-weight: 300;
   line-height: 32px;
   text-indent: 40px;
   text-transform: uppercase;
@@ -254,6 +258,7 @@
   }
 }
 #wrap header > .container > nav {
+  z-index: 1000;
   position: absolute;
   right: 7%;
   top: 50%;
@@ -267,7 +272,7 @@
     top: 66px;
     width: 100%;
     transform: initial;
-    border-top: 1px solid black;
+    border-top: 1px solid #01331e;
   }
 }
 #wrap header > .container > nav > .gnb {
@@ -280,12 +285,12 @@
 }
 #wrap header > .container > nav > .gnb > li:hover > a,
 #wrap header > .container > nav > .gnb > li.on > a {
-  color: #ffffff;
+  color: #78b87b;
 }
 @media screen and (max-width: 640px) {
   #wrap header > .container > nav > .gnb > li {
-    background-color: #ffffff;
-    border-bottom: 1px solid black;
+    background-color: #fdfbf4;
+    border-bottom: 1px solid #01331e;
   }
   #wrap header > .container > nav > .gnb > li:hover > a,
   #wrap header > .container > nav > .gnb > li.on > a {
@@ -295,8 +300,8 @@
 #wrap header > .container > nav > .gnb > li > a {
   display: block;
   padding: 0 15px;
-  color: #3c3c3c;
-  font-weight: 500;
+  color: #fdfbf4;
+  font-weight: 350;
   text-transform: uppercase;
   transition: all 0.2s;
 }
@@ -304,6 +309,8 @@
   #wrap header > .container > nav > .gnb > li > a {
     height: 48px;
     padding: 0;
+    color: #01331e;
+    font-weight: 400;
     line-height: 48px;
     text-indent: 7%;
   }
@@ -313,7 +320,7 @@
 }
 #wrap header ~ section > h2 {
   margin-bottom: 72px;
-  color: #1d340a;
+  color: #01331e;
   font-size: 50px;
   line-height: 50px;
   text-align: center;
@@ -330,11 +337,12 @@
   display: flex;
   flex-direction: row-reverse;
   padding-bottom: 30px;
+  border-bottom: 1px solid #01331e;
 }
 @media screen and (max-width: 640px) {
   #wrap #aboutme > .container {
     display: block;
-    padding-bottom: 120px;
+    padding-bottom: 200px;
   }
 }
 #wrap #aboutme > .container > .profile {
@@ -371,7 +379,7 @@
 }
 #wrap #aboutme > .container > .profile > div > .myphoto {
   overflow: hidden;
-  background-image: url(./../images/aboutme/photo-frame.png);
+  /* background-image: url(./../images/aboutme/photo-frame.jpg); */
   background-position: 0 bottom;
   background-size: contain;
   background-repeat: no-repeat;
@@ -391,7 +399,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 45px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #d5d5d5;
 }
 #wrap #aboutme > .container > .profile > div > ol > li:last-child {
   border-bottom-width: 0;
@@ -568,10 +576,11 @@
 #wrap #ability {
   margin-top: 100px;
   padding-bottom: 50px;
-  background-color: #efe9dd;
+  border-top: 1px solid #01331e;
+  border-bottom: 1px solid #01331e;
 }
 #wrap #ability > h2 {
-  color: #1d340a;
+  color: #01331e;
 }
 #wrap #ability > .ability-container {
   padding-bottom: 50px;
@@ -606,7 +615,7 @@
 #wrap #ability > .ability-container > .stick > .stick-container > .item > h3 {
   width: 17%;
   padding-right: 8%;
-  color: #1d340a;
+  color: #01331e;
   font-weight: 600;
   line-height: 10px;
   text-align: right;
@@ -655,11 +664,10 @@
   position: absolute;
   right: 15px;
   top: -20px;
-  color: #1d340a;
+  color: #01331e;
 }
 #wrap #ability > .resume {
   padding: 50px 0;
-  background-color: #ffffff;
 }
 #wrap #ability > .resume > div {
   display: flex;
@@ -715,10 +723,10 @@
   display: block;
   width: 260px;
   height: 40px;
-  color: #ffffff;
+  color: #fdfbf4;
   line-height: 40px;
   text-align: center;
-  background-color: #58653e;
+  background-color: #01331e;
   border-radius: 5px;
 }
 @media screen and (max-width: 640px) {
@@ -729,6 +737,7 @@
 #wrap #ability > .resume > div > .iam > .shadow {
   display: none;
   position: fixed;
+  z-index: 1000;
   left: 0;
   right: 0;
   top: 0;
@@ -738,22 +747,18 @@
 #wrap #ability > .resume > div > .iam > .shadow .lightbox {
   position: fixed;
   left: 40%;
-  top: 20%;
+  top: 13%;
 }
 #wrap #ability > .resume > div > .iam > .shadow .lightbox > img {
-  z-index: 1000;
-  width: 400px;
-  height: 500px;
+  width: 500px;
+  height: 700px;
 }
-
 #wrap #ability > .resume > div > .iam > .shadow .lightbox > .clse {
-  width: 40px;
-  height: 30px;
   position: absolute;
-  bottom: 13px;
+  bottom: 12px;
   left: 10px;
+  width: 45px;
 }
-
 #wrap #uxdesign {
   width: 1200px;
   margin: 0 auto;
@@ -794,7 +799,8 @@
 }
 @media screen and (max-width: 640px) {
   #wrap #uxdesign > .slides > .slides-container > li.banner_1 {
-    background-image: url(./../images/uxdesign/slides/rwd_slide_1.png);
+    background-image: url(./../images/uxdesign/slides/slide_1.png);
+    background-size: auto;
   }
 }
 #wrap #uxdesign > .slides > .slides-container > li.banner_2 {
@@ -802,7 +808,7 @@
 }
 @media screen and (max-width: 640px) {
   #wrap #uxdesign > .slides > .slides-container > li.banner_2 {
-    background-image: url(./../images/uxdesign/slides/rwd_slide_2.png);
+    background-image: url(./../images/uxdesign/slides/slide_2.jpg);
   }
 }
 #wrap #uxdesign > .slides > .slides-container > li.banner_3 {
@@ -810,7 +816,7 @@
 }
 @media screen and (max-width: 640px) {
   #wrap #uxdesign > .slides > .slides-container > li.banner_3 {
-    background-image: url(./../images/uxdesign/slides/rwd_slide_3.png);
+    background-image: url(./../images/uxdesign/slides/slide_3.png);
   }
 }
 #wrap #uxdesign > .slides > .slides-container > li.banner_4 {
@@ -818,7 +824,7 @@
 }
 @media screen and (max-width: 640px) {
   #wrap #uxdesign > .slides > .slides-container > li.banner_4 {
-    background-image: url(./../images/uxdesign/slides/rwd_slide_4.png);
+    background-image: url(./../images/uxdesign/slides/slide_4.png);
   }
 }
 #wrap #uxdesign > .slides > .slides-pagination {
@@ -926,42 +932,6 @@
   display: block;
   margin-bottom: 30px;
 }
-#wrap #uxdesign > .intro > .bus-alarm {
-  display: flex;
-}
-@media screen and (max-width: 640px) {
-  #wrap #uxdesign > .intro > .bus-alarm {
-    flex-direction: column-reverse;
-  }
-}
-#wrap #uxdesign > .intro > .bus-alarm > h4 {
-  align-self: flex-end;
-  width: 43%;
-  margin-right: 20px;
-  font-weight: 400;
-  font-size: 16px;
-  text-align: right;
-}
-@media screen and (max-width: 640px) {
-  #wrap #uxdesign > .intro > .bus-alarm > h4 {
-    width: 100%;
-    margin-right: 0;
-    text-align: center;
-  }
-}
-#wrap #uxdesign > .intro > .bus-alarm > .frame {
-  width: 527px;
-}
-@media screen and (max-width: 640px) {
-  #wrap #uxdesign > .intro > .bus-alarm > .frame {
-    width: 90%;
-    margin: 0 auto 10px;
-  }
-}
-#wrap #uxdesign > .intro > .bus-alarm > .frame > img {
-  display: block;
-  width: 100%;
-}
 #wrap #uxdesign > .uxui {
   width: 1200px;
   padding-bottom: 104px;
@@ -1015,7 +985,7 @@
 }
 @media screen and (max-width: 640px) {
   #wrap #uxdesign > .uxui > h3:after {
-    top: 520px;
+    top: 565px;
     width: 40px;
     margin-right: -20px;
     font-size: 24px;
@@ -1108,7 +1078,7 @@
   #wrap #uxdesign > .uxui > .container > .uxui-case > .ui-frame {
     position: initial;
     width: 100%;
-    height: auto;
+    height: 170px;
     margin: 0;
   }
 }
@@ -1138,7 +1108,7 @@
   #wrap #uxdesign > .uxui > .container > .uxui-case > .ux-frame {
     position: initial;
     width: 100%;
-    height: auto;
+    height: 170px;
     margin: 0;
   }
 }
@@ -1152,6 +1122,11 @@
   #wrap #uxdesign > .uxui > .container > .uxui-case > .ux-frame > img {
     border-radius: 0 0 150px 150px;
   }
+}
+#wrap > #portfolio {
+  border-top: 1px solid #01331e;
+  border-bottom: 1px solid #01331e;
+  padding-bottom: 100px;
 }
 #wrap > #portfolio > article {
   width: 1200px;
@@ -1408,8 +1383,8 @@
   > figcaption
   > .btn
   > a:hover {
-  color: #ffffff;
-  background-color: #68c3a3;
+  color: #fdfbf4;
+  background-color: #78b87b;
 }
 #wrap
   > #portfolio
@@ -1492,8 +1467,8 @@
   > video {
   display: block;
   position: absolute;
-  left: 78px;
-  top: 13px;
+  left: 79px;
+  top: 15px;
   width: 550px;
   height: 330px;
 }
@@ -1684,7 +1659,7 @@
   }
 }
 #wrap > footer > .info {
-  background-color: #efe9dd;
+  background-color: #01331e;
 }
 #wrap > footer > .info > .container {
   position: relative;
@@ -1693,12 +1668,13 @@
 #wrap > footer > .info > .container h2,
 #wrap > footer > .info > .container p {
   margin-bottom: 15px;
-  color: #1d340a;
+  color: #fdfbf4;
   font-size: 13px;
+  font-weight: 350;
 }
 #wrap > footer > .info > .container h2 > a,
 #wrap > footer > .info > .container p > a {
-  color: #1d340a;
+  color: #fdfbf4;
 }
 #wrap > footer > .info > .container h2 > .bar,
 #wrap > footer > .info > .container p > .bar {
@@ -1738,7 +1714,7 @@
   height: 28px;
   line-height: 28px;
   text-align: center;
-  background-color: #1d340a;
+  background-color: #01331e;
 }
 #wrap > aside > .top > i {
   color: #ffffff;
